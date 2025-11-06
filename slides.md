@@ -137,7 +137,7 @@ Even before the invention of the book press, books and scrolls have been pretty 
 
 Typically, books are portable stacks of bound paper containing text and imagery.
 
-Books can combined into collections without changing their design. 
+Books can be combined into collections without changing their design. 
 
 Books are kept around the world in (little) public libraries, academic institutions, private collections and national archives.
 
@@ -151,7 +151,7 @@ Even before the invention of the book press, books and scrolls have been pretty 
 
 Typically, books are portable stacks of bound paper containing text and imagery.
 
-Books can combined into collections without changing their design. 
+Books can be combined into collections without changing their design. 
 
 Books are kept around the world in (little) public libraries, academic institutions, private collections and national archives.
 
