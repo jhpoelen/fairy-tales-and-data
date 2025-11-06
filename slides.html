@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Jorrit H. Poelen" />
+  <meta name="dcterms.date" content="2025-11-17" />
+  <title>Fairy Tales and Digital Research Data</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Fairy Tales and Digital Research Data</h1>
+<p class="author">Jorrit H. Poelen</p>
+<p class="date">2025-11-17</p>
+</header>
+<p><img src="img/propollsoil.svg" style="height:20.0%" /></p>
+<p>Presented at the 17-19 Nov 2025 kick-off meeting in Freisingen,
+Germany of the EU Horizon’s <a
+href="https://propollsoil.eu/">ProPollSoil</a> project “Understanding
+and managing soil health impacts to protect soil-dependent pollinators”
+<a
+href="https://doi.org/10.3030/101219108">https://doi.org/10.3030/101219108</a>.</p>
+<hr />
+<p>Adapted from:</p>
+<p>Poelen, J. H., &amp; Seltmann, K. C. (2025, October 23). Book Binding
+for the Digital Age hash://md5/097a516df8d5eb03aadcaeed942e557b. Datos
+Vivos/Living Data 2025, Bogotá, Colombia. Zenodo.
+https://doi.org/10.5281/zenodo.17392711 a presentation as part of the
+Datos Vivos conference in Bogotá, Colombia 21-24 Oct 2025.</p>
+<hr />
+<h3 id="cite-as">Cite As</h3>
+<p>Poelen, J.H. (2025) Fairy Tales and Digital Research Data. Zenodo. <a
+href="https://doi.org/10.5281/zenodo.">https://doi.org/10.5281/zenodo.</a></p>
+<h3 id="license">License</h3>
+<p>CC BY 4.0. For license text, see <a
+href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>.</p>
+<p><img src="img/cc-by.png" /></p>
+<hr />
+<h2 id="guiding-questions">Guiding Questions</h2>
+<h3 id="how-to-keep-our-digital-biodiversity-data-around">How to keep
+our Digital Biodiversity Data around?</h3>
+<h3
+id="how-to-make-best-use-of-our-past-present-future-digital-research-data">How
+to make best use of our (past, present, future) digital research
+data?</h3>
+<h3
+id="what-is-one-of-your-experiences-that-comes-to-mind-in-which-digital-data-played-a-not-so-beneficial-role-in-a-transnational-multi-institutional-collaborative-research-community-share-your-horror-story">What
+is <strong>one</strong> of <strong>your</strong> experiences that comes
+to mind in which digital data played a <em>not</em> so beneficial role
+in a transnational, multi-institutional, collaborative research
+community? Share your horror story!</h3>
+<h2 id="digital-data-on-the-internet-are-ephemeral">Digital Data on the
+Internet are Ephemeral</h2>
+<blockquote>
+<p>[…] We began in 1996 by archiving the Internet itself, a medium that
+was just beginning to grow in use. Like newspapers, the content
+published on the web was ephemeral - but unlike newspapers, no one was
+saving it. […] <a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a></p>
+</blockquote>
+<h2 id="digital-biodiversity-data-on-the-internet-are-ephemeral">Digital
+<strong>Biodiversity</strong> Data on the Internet are Ephemeral</h2>
+<blockquote>
+<p>[…] 20%-75% of biodiversity datasets in data networks GBIF, iDigBio,
+DataONE, and BHL changed or were unavailable in 2019/2020.[…] <a
+href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a></p>
+</blockquote>
+<h2 id="who-or-what-keeps-our-digital-biodiversity-data-around">Who or
+what keeps our Digital Biodiversity Data around?</h2>
+<ol type="a">
+<li><p><strong>the Data Fairy.</strong></p></li>
+<li><p>Awareness of the fragility of digital data.</p></li>
+<li><p>Common sense data archiving and citation practices.</p></li>
+</ol>
+<h2 id="who-or-what-keeps-our-digital-biodiversity-data-around-1">Who or
+what keeps our Digital Biodiversity Data around?</h2>
+<ol type="a">
+<li><strong>the Data Fairy.</strong></li>
+</ol>
+<blockquote>
+<p>Who is this Data Fairy?</p>
+</blockquote>
+<ol start="2" type="a">
+<li><p>Awareness of the fragility of digital data.</p></li>
+<li><p>Common sense data archiving and citation practices.</p></li>
+</ol>
+<h2 id="is-gbif-our-data-fairy">Is GBIF our Data Fairy?</h2>
+<p>GBIF Secretariat provides a publication <strong>framework</strong>
+for biodiversity data, but <strong>is neither the owner nor custodian of
+such data</strong>, and therefore is not responsible for the actual
+content served by Data Publishers.</p>
+<p>GBIF Secretariat cannot guarantee the quality or completeness of
+data, <strong>nor does it guarantee uninterrupted data access
+services</strong>. Users employ these data and services at their own
+risk. <a href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>.</p>
+<h2 id="is-gbif-our-data-fairy-1">Is GBIF our Data Fairy?</h2>
+<p>GBIF Secretariat provides a publication <strong>framework</strong>
+for biodiversity data, but <strong>is neither the owner nor custodian of
+such data</strong>, and therefore is not responsible for the actual
+content served by Data Publishers.</p>
+<p>GBIF Secretariat cannot guarantee the quality or completeness of
+data, <strong>nor does it guarantee uninterrupted data access
+services</strong>. Users employ these data and services at their own
+risk. <a href="#fn4" class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a>.</p>
+<h3 id="no">No!</h3>
+<h3
+id="gbif-is-not-claiming-to-be-a-data-fairy-who-keeps-your-digital-archives."><strong>GBIF
+is not claiming to be a data fairy who keeps your digital
+archives.</strong></h3>
+<h2 id="is-zenodo-our-data-fairy">Is Zenodo our Data Fairy?</h2>
+<p>[…] Data files are versioned. Records are not versioned. […] Records
+can be retracted from public view; however, the data files and record
+are preserved. […] Items will be retained for the lifetime of the
+repository. This is currently the lifetime of the host laboratory CERN,
+which currently has an experimental programme defined for the next 20
+years at least. […] All data files are stored in CERN Data Centres,
+primarily Geneva, with replicas in Budapest. […] In case of closure of
+the repository, best efforts will be made to integrate all content into
+suitable alternative institutional and/or subject based repositories.
+[…] <a href="#fn5" class="footnote-ref" id="fnref5"
+role="doc-noteref"><sup>5</sup></a>.</p>
+<h2 id="is-zenodo-our-data-fairy-1">Is Zenodo our Data Fairy?</h2>
+<p>[…] Data files are versioned. Records are not versioned. […] Records
+can be retracted from public view; however, the data files and record
+are preserved. […] Items will be retained for the lifetime of the
+repository. This is currently the lifetime of the host laboratory CERN,
+which currently has an experimental programme defined for the next 20
+years at least. […] All data files are stored in CERN Data Centres,
+primarily Geneva, with replicas in Budapest. […] In case of closure of
+the repository, best efforts will be made to integrate all content into
+suitable alternative institutional and/or subject based repositories.
+[…] <a href="#fn6" class="footnote-ref" id="fnref6"
+role="doc-noteref"><sup>6</sup></a>.</p>
+<h3 id="no-1">No!</h3>
+<h3
+id="zenodo-is-not-claiming-to-be-a-data-fairy-who-keeps-your-digital-archives."><strong>Zenodo
+is not claiming to be a data fairy who keeps your digital
+archives.</strong></h3>
+<h2 id="data-fairy-is-a-cousin-of-the-poop-fairy.">Data Fairy is a
+Cousin of the Poop Fairy.</h2>
+<p><img src="img/poop-fairy-yard.jpeg" /></p>
+<h2 id="data-fairy-is-a-cousin-of-the-poop-fairy.-1">Data Fairy is a
+Cousin of the Poop Fairy.</h2>
+<p><img src="img/archiving-fairy-yard.jpeg" /></p>
+<h2 id="recent-reminders-of-data-fairy-absence">Recent Reminders of Data
+Fairy Absence</h2>
+<ul>
+<li>Server infrastructure running the Symbiota Hosted Portals at Arizona
+State University (ASU) was compromised and taken offline 21 Jul 2025 and
+was said to be fully restored on 10 Oct 2025 after hard work by the
+Symbiota Support Hub team. The outage affected over 54 hosted
+collections.</li>
+<li>The Symbiota Collections of Arthropods Network (<strong>SCAN:
+https://scan-bugs.org</strong>) serving specimen occurrence records and
+images from over 100 North American arthropod collections for all
+arthropod taxa, was taken offline in 2025 with no plans to revive
+it.</li>
+<li>20 years since its inception and facilitating access to over 300k
+digitized biodiversity data works, the <strong>Biodiversity Heritage
+Library</strong> faces an uncertain future as it is set to lose their
+institutional sponsor, the Smithsonian, on 1 Jan 2026 <a href="#fn7"
+class="footnote-ref" id="fnref7"
+role="doc-noteref"><sup>7</sup></a>.</li>
+</ul>
+<h2 id="who-or-what-keeps-our-digital-biodiversity-data-around-2">Who or
+what keeps our Digital Biodiversity Data around?</h2>
+<ol type="a">
+<li><p><del>the Data Fairy</del></p></li>
+<li><p><strong>Awareness of the fragility of digital
+data.</strong></p></li>
+<li><p>Common sense data archiving and citation practices.</p></li>
+</ol>
+<h2 id="who-or-what-keeps-our-digital-biodiversity-data-around-3">Who or
+what keeps our Digital Biodiversity Data around?</h2>
+<ol type="a">
+<li><p><del>the Data Fairy</del></p></li>
+<li><p>Awareness of the fragility of digital data.</p></li>
+<li><p><strong>Common sense data archiving and citation
+practices.</strong></p></li>
+</ol>
+<h2 id="book-binding-for-digital-biodiversity-data">Book Binding for
+Digital Biodiversity Data</h2>
+<ul>
+<li><p>What is so neat about physical books?</p></li>
+<li><p>What is book binding for biodiversity data?</p></li>
+<li><p>Example 1: The iDigBio Archives</p></li>
+<li><p>Example 2: Plazi’s BHL Corpus</p></li>
+<li><p>Example 3: GloBI’s Archive and Review of SCAN</p></li>
+</ul>
+<h2 id="the-neat-thing-about-physical-books">The Neat Thing about
+Physical Books</h2>
+<p>Even before the invention of the book press, books and scrolls have
+been pretty successful in transferring knowledge across generations and
+around the world.</p>
+<p>Typically, books are portable stacks of bound paper containing text
+and imagery.</p>
+<p>Books can combined into collections without changing their
+design.</p>
+<p>Books are kept around the world in (little) public libraries,
+academic institutions, private collections and national archives.</p>
+<p>Books are wireless, their content cannot be easily altered remotely,
+changes can be detected (ripped out pages), and they need no power to
+operate.</p>
+<p>Books can be sent by physical mail.</p>
+<h2 id="the-neat-thing-about-physical-books-1">The Neat Thing about
+Physical Books</h2>
+<p>Even before the invention of the book press, books and scrolls have
+been pretty successful in transferring knowledge across generations and
+around the world.</p>
+<p>Typically, books are portable stacks of bound paper containing text
+and imagery.</p>
+<p>Books can combined into collections without changing their
+design.</p>
+<p>Books are kept around the world in (little) public libraries,
+academic institutions, private collections and national archives.</p>
+<p>Books are wireless, their content cannot be easily altered remotely,
+changes can be detected (ripped out pages), and they need no power to
+operate.</p>
+<p>Books can be sent by physical mail.</p>
+<h3
+id="idea-what-if-we-treat-digital-data-more-like-a-bound-book-instead-of-a-web-location">Idea
+… what if we treat digital data more like a bound book instead of a web
+location?</h3>
+<h2 id="steps-to-binding-digital-data-books">Steps to Binding Digital
+Data Books</h2>
+<p>Step 1. Use <strong>signed</strong> citations to reference digital
+data <a href="#fn8" class="footnote-ref" id="fnref8"
+role="doc-noteref"><sup>8</sup></a>.</p>
+<p>Step 2. Bind these referenced data by describing them in a
+<strong>Data Bill of Materials</strong> (DataBoM).</p>
+<p>Step 3. Publish the data bill of materials, a digital text file.</p>
+<p>Step 4. Use the signed citation of the data bill of material
+(DataBoM) in your research.</p>
+<p>Step 5. Continuously monitor the availability of the DataBoM and the
+associated data.</p>
+<h2 id="example-1-databom-for-idigbio-data-registry">Example 1: DataBoM
+for iDigBio Data Registry</h2>
+<p>Create an iDigBio Data Bill of Materials by capturing their
+registered datasets, and describing their origins,</p>
+<pre><code>(iDigBio Registry with Institutional DwC-A Data URLs) 
+  -[:take snapshot and download DwC-As]
+     -&gt;(DataBoM + DwC-A files) </code></pre>
+<p>using the following Preston <a href="#fn9" class="footnote-ref"
+id="fnref9" role="doc-noteref"><sup>9</sup></a> command</p>
+<pre><code>preston track --seed https://idigbio.org</code></pre>
+<h2 id="data-bill-of-material-databom-in-english">Data Bill of Material
+(DataBoM) in English</h2>
+<p>Expressing the digital content and their origin of the DataBoM in
+“plain” English:</p>
+<p><em>“A version of the iDigBio registry was downloaded on 2025-10-01
+from &lt;…idigbio.org/v2/search…&gt; with content signature
+&lt;hash://sha256/52d6…&gt;. This iDigBio registry version had member
+dataset <a href="urn:uuid:650..." class="uri">urn:uuid:650...</a>
+associated with &lt;…/UCSB-IZC_DwC-A.zip&gt; . And this DwC-A URL had
+content signature &lt;hash://sha256/3d4e…&gt; as seen on
+2025-10-01.”</em></p>
+<h2 id="data-bill-of-material-databom-in-rdfnquads">Data Bill of
+Material (DataBoM) in rdf/nquads</h2>
+<p>or, made more machine readable using Provenance Ontology <a
+href="#fn10" class="footnote-ref" id="fnref10"
+role="doc-noteref"><sup>10</sup></a> and Hash URIs <a href="#fn11"
+class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>
+as expressed in rdf/nquads:</p>
+<pre><code>&lt;...idigbio.org/v2/search...&gt; 
+  &lt;hasVersion&gt; 
+    &lt;hash://sha256/52d6...&gt; .
+&lt;hash://sha256/52d6...&gt; 
+  &lt;hadMember&gt; 
+    &lt;urn:uuid:650...&gt; .
+&lt;urn:uuid:650...&gt; 
+  &lt;hadMember&gt; 
+    &lt;.../UCSB-IZC_DwC-A.zip&gt; .
+&lt;.../UCSB-IZC_DwC-A.zip&gt; 
+  &lt;hasVersion&gt; 
+    &lt;hash://sha256/3d4e...&gt; .</code></pre>
+<h2 id="databom-binds-data-together">DataBoM Binds Data Together</h2>
+<p>As a text file, the DataBoM has a content signature that uniquely
+identifies the digital bound collection of signed data it
+references.</p>
+<p>So, retrieval method for data bundle defined by DataBoM with
+signature X is:</p>
+<ol type="1">
+<li>get the DataBoM by their signature X.</li>
+<li>get data listed in DataBoM by their signatures.</li>
+</ol>
+<p>Note that we are asking for the data content, not the data location.
+Also, content signatures are format agnostic, so any content (of any
+size) can be included.</p>
+<h2 id="databom-binds-data-together-1">DataBoM Binds Data Together</h2>
+<p>Here’s a retrieval method for the first DwC record in the data bundle
+defined by DataBoM with a sha256 signature starting with 40c4… as
+<strong>expressed in a bash script</strong>.</p>
+<pre><code>preston cat\
+ --remote https://linker.bio \
+ hash://sha256/40c44d75d243e\
+8d1fde2376483637df6f96bfe182\
+bb4bcd119cb5311cfdbc000 \
+ | preston dwc-stream \
+  --remote https://linker.bio \
+ | head -1</code></pre>
+<p>producing the first record as <em>Saara hardiwicki</em>, a lizard
+specimen from Pakistan from Museo de Zoología, Universidad de Puerto
+Rico, Río Piedras (UPRRP:MZUPRRP).</p>
+<h2
+id="we-found-a-lizard-specimen-from-pakistan-in-a-puerto-rican-collection">We
+found a lizard specimen from Pakistan in a Puerto Rican Collection!</h2>
+<p><img src="img/lizard-from-pakistan-MZUPRRP-R-000001.png" /></p>
+<h2 id="databom-flexibility">DataBoM Flexibility</h2>
+<p>Data Bill of Materials (DataBoMs)</p>
+<ol type="1">
+<li>… can reference other DataBoMs, including older versions of a
+DataBoM.</li>
+<li>… can be tiny or super huge</li>
+<li>… allow for arbitrarily detailed description of data provenance in
+natural language or using structured text like rdf/nquads in combation
+with the provenance ontology.</li>
+</ol>
+<p>With this, DataBoMs are a recursive data structure allowed to grow to
+arbitrary size.</p>
+<h2 id="examples-2.-and-3.-more-existing-databoms">Examples 2. and 3. —
+More Existing DataBoMs</h2>
+<h3 id="k-digitized-biodiversity-heritage-literature-items">&gt;300k
+Digitized Biodiversity Heritage Literature Items</h3>
+<p>Poelen, J. H., &amp; Agosti, D. (2025). A Versioned Literature Corpus
+derived from Biodiversity Heritage Library
+hash://md5/b3cd9de0685deeebf57a5d225e59c10f (0.3) [Data set]. Zenodo.
+https://doi.org/10.5281/zenodo.16616872</p>
+<h3 id="darwin-core-archives-associated-with-scan-bugs.org">Darwin Core
+Archives Associated with scan-bugs.org</h3>
+<p>Elton, Nomer, &amp; Preston. (2025). Versioned Archive and Review of
+Biotic Interactions and Taxon Names Found within
+globalbioticinteractions/scan
+hash://md5/58de50154e330c331993fe5d0852ad84. Zenodo.
+https://doi.org/10.5281/zenodo.16894884</p>
+<h2 id="who-or-what-keeps-our-digital-biodiversity-data-around-4">Who or
+what keeps our Digital Biodiversity Data around?</h2>
+<ol type="a">
+<li><p><del>the Data Fairy</del></p></li>
+<li><p><strong>Awareness of the fragility of digital
+data.</strong></p></li>
+<li><p><strong>Common sense data archiving and citation
+practices.</strong></p></li>
+</ol>
+<h2 id="how-to-keep-our-digital-biodiversity-data-around-1">How to keep
+our Digital Biodiversity Data around?</h2>
+<p>I’ve been using this Data Bill of Materials approach to track
+terrabytes of biodiversity data since Sept 2018, keeping identical
+copies across independent storage locations, and reusing their
+content.</p>
+<h3 id="how-do-you-intend-keep-our-digital-heritage-around">How do
+<em>you</em> intend keep our digital heritage around?</h3>
+<h2 id="and-remember">And Remember</h2>
+<p><img src="img/archiving-fairy-yard.jpeg" /></p>
+<h2 id="thank-you">Thank you!</h2>
+<p>Made possible (in part) by Horizon Europe’s <a
+href="https://doi.org/10.3030/101219108">101219108</a>, NSF’s <a
+href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2027654">DBI
+2027654</a>, <a
+href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2102006">DBI
+2102006</a> and <a
+href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1839201">OAC
+1839201</a>.</p>
+<p>For questions/comments/ideas, please do reach out to:</p>
+<p><strong>Jorrit H. Poelen</strong></p>
+<p><a href="https://jhpoelen.nl">https://jhpoelen.nl</a></p>
+<p><a href="mailto:jhpoelen@jhpoelen.nl">jhpoelen@jhpoelen.nl</a></p>
+<p><a
+href="https://orcid.org/0000-0003-3138-4118">https://orcid.org/0000-0003-3138-4118</a></p>
+<h2 id="guiding-questions-1">Guiding Questions</h2>
+<h3 id="how-to-keep-our-digital-biodiversity-data-around-2">How to keep
+our Digital Biodiversity Data around?</h3>
+<h3
+id="how-to-make-best-use-of-our-past-present-future-digital-research-data-1">How
+to make best use of our (past, present, future) digital research
+data?</h3>
+<h3
+id="what-is-one-of-your-experiences-that-comes-to-mind-in-which-digital-data-played-a-not-so-beneficial-role-in-a-transnational-multi-institutional-collaborative-research-community-share-your-horror-story-1">What
+is <strong>one</strong> of <strong>your</strong> experiences that comes
+to mind in which digital data played a <em>not</em> so beneficial role
+in a transnational, multi-institutional, collaborative research
+community? Share your horror story!</h3>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Internet Archive. 2025. Accessed on 2025-10-13 at
+https://archive.org/about<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Elliott et al. 2020. Ecol Inf. <a
+href="https://doi.org/10.1016/j.ecoinf.2020.101132">doi:10.1016/j.ecoinf.2020.101132</a><a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>https://www.gbif.org/terms/data-user as accessed on
+2025-10-13<a href="#fnref3" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>https://www.gbif.org/terms/data-user as accessed on
+2025-10-13<a href="#fnref4" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>https://about.zenodo.org/policies/ as accessed on
+2025-11-05<a href="#fnref5" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>https://about.zenodo.org/policies/ as accessed on
+2025-11-05<a href="#fnref6" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li
+id="fn7"><p>https://about.biodiversitylibrary.org/about/future-of-bhl/<a
+href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Elliott et al. 2023. Sci Data. <a
+href="https://doi.org/10.1038/s41597-023-02230-y">doi:10.1038/s41597-023-02230-y</a><a
+href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>https://github.com/bio-guoda/preston<a href="#fnref9"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>https://www.w3.org/TR/prov-o/<a href="#fnref10"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>Elliot et al. 2023. Sci Data. <a
+href="https://doi.org/10.1038/s41597-023-02230-y">doi:10.1038/s41597-023-02230-y</a><a
+href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>
