@@ -104,7 +104,6 @@ GBIF Secretariat cannot guarantee the quality or completeness of data, **nor doe
  * The Symbiota Collections of Arthropods Network (**SCAN: https://scan-bugs.org**) serving specimen occurrence records and images from over 100 North American arthropod collections for all arthropod taxa, was taken offline in 2025 with no plans to revive it.
  * 20 years since its inception and facilitating access to over 300k digitized biodiversity data works, the **Biodiversity Heritage Library** faces an uncertain future as it is set to lose their institutional sponsor, the Smithsonian, on 1 Jan 2026 ^[https://about.biodiversitylibrary.org/about/future-of-bhl/].  
 
-
 ## Who or what keeps our Digital Biodiversity Data around? 
 
 a) ~~the Data Fairy~~
@@ -112,6 +111,10 @@ a) ~~the Data Fairy~~
 b) **Awareness of the fragility of digital data.**
 
 c) Common sense data archiving and citation practices.
+
+## Guiding Question
+
+### How do *you* make use of our (past, present, future) digital research data? 
 
 ## Who or what keeps our Digital Biodiversity Data around? 
 
@@ -161,29 +164,13 @@ Books can be sent by physical mail.
 
 Step 1. Use **signed** citations to reference digital data ^[Elliott et al. 2023. Sci Data. [doi:10.1038/s41597-023-02230-y](https://doi.org/10.1038/s41597-023-02230-y)].
 
-Step 2. Bind these referenced data by describing them in a **Data Bill of Materials** (DataBoM). 
+Step 2. Bind these referenced data by describing them in a **Data Bill of Materials** (DataBoM) ^[Poelen, J. H., & Seltmann, K. C. (2025, October 23). Book Binding for the Digital Age [hash://md5/097a516df8d5eb03aadcaeed942e557b](https://linker.bio/hash://md5/097a516df8d5eb03aadcaeed942e557b). Datos Vivos/Living Data 2025, Bogotá, Colombia. Zenodo. [doi:10.5281/zenodo.17392711](https://doi.org/10.5281/zenodo.17392711)]. 
 
 Step 3. Publish the data bill of materials, a digital text file.
 
 Step 4. Use the signed citation of the data bill of material (DataBoM) in your research. 
 
 Step 5. Continuously monitor the availability of the DataBoM and the associated data.
-
-## Existing DataBoMs
-
-### >300k Digitized Biodiversity Heritage Literature Items
-Poelen, J. H., & Agosti, D. (2025). A Versioned Literature Corpus derived from Biodiversity Heritage Library hash://md5/b3cd9de0685deeebf57a5d225e59c10f (0.3) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.16616872
-
-### Darwin Core Archives Associated with scan-bugs.org
-Elton, Nomer, & Preston. (2025). Versioned Archive and Review of Biotic Interactions and Taxon Names Found within globalbioticinteractions/scan hash://md5/58de50154e330c331993fe5d0852ad84. Zenodo. https://doi.org/10.5281/zenodo.16894884
-
-## How to keep our Digital Biodiversity Data around? 
-
-I've been using this Data Bill of Materials approach to track terrabytes of biodiversity data since Sept 2018, keeping identical copies across independent storage locations, and reusing their content.
-
-For examples and recorded presentation, see: 
-
-Poelen, J. H., & Seltmann, K. C. (2025, October 23). Book Binding for the Digital Age hash://md5/097a516df8d5eb03aadcaeed942e557b. Datos Vivos/Living Data 2025, Bogotá, Colombia. Zenodo. https://doi.org/10.5281/zenodo.17392711 a presentation as part of the Datos Vivos conference in Bogotá, Colombia 21-24 Oct 2025.
 
 ## Who or what keeps our Digital Biodiversity Data around? 
 
@@ -192,6 +179,10 @@ a) ~~the Data Fairy~~
 b) **Awareness of the fragility of digital data.**
 
 c) **Common sense data archiving and citation practices.**
+
+## Guiding Question
+
+### What is *one* of *your* experiences that comes to mind in which digital data played a *not* so beneficial role in a transnational, multi-institutional, collaborative research community? Share your horror story!
 
 ## And Remember
 
