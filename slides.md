@@ -131,12 +131,6 @@ c) **Common sense data archiving and citation practices.**
 
  * What is book binding for biodiversity data? 
 
- * Example 1: The iDigBio Archives
- 
- * Example 2: Plazi's BHL Corpus 
-
- * Example 3: GloBI's Archive and Review of SCAN
-
 ## The Neat Thing about Physical Books
 
 Even before the invention of the book press, books and scrolls have been pretty successful in transferring knowledge across generations and around the world. 
