@@ -36,10 +36,6 @@ CC BY 4.0. For license text, see [https://creativecommons.org/licenses/by/4.0/](
 
 ### How do *you* keep our Digital Biodiversity Data around? 
 
-### How do *you* make use of our (past, present, future) digital research data? 
-
-### What is *one* of *your* experiences that comes to mind in which digital data played a *not* so beneficial role in a transnational, multi-institutional, collaborative research community? Share your horror story!
-
 ## Digital Data on the Internet are Ephemeral
 
 > [...] We began in 1996 by archiving the Internet itself, a medium that was just beginning to grow in use. Like newspapers, the content published on the web was ephemeral - but unlike newspapers, no one was saving it. [...] ^[Internet Archive. 2025. Accessed on 2025-10-13 at https://archive.org/about]
@@ -218,8 +214,4 @@ For questions/comments/ideas, please do reach out to:
 ## Guiding Questions
 
 ### How do *you* keep our Digital Biodiversity Data around? 
-
-### How do *you* make use of our (past, present, future) digital research data? 
-
-### What is *one* of *your* experiences that comes to mind in which digital data played a *not* so beneficial role in a transnational, multi-institutional, collaborative research community? Share your horror story!
 
